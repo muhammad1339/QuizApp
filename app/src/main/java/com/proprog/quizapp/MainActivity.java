@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean answerForQuestionFive() {
         boolean check = false;
-        int numOfChosen ;
+        int numOfChosen = 0;
 
         //prepare checkboxes
         CheckBox firstChoiceCheckBox = (CheckBox) findViewById(R.id.q5_a);
