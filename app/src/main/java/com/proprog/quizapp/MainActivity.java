@@ -99,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
         boolean check = false;
         int numOfChosen = 0;
 
-
         //prepare checkboxes
         CheckBox firstChoiceCheckBox = (CheckBox) findViewById(R.id.q5_a);
         CheckBox secondChoiceCheckBox = (CheckBox) findViewById(R.id.q5_b);
