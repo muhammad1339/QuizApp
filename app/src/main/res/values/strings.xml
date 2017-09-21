@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+
+    <!-- string resources for question one msq-->
+    <string name="question_one">What is the term used for describing the judgmental
+        or commonsense part of problem solving?</string>
+    <string name="question_one_a">Heuristic</string>
+    <string name="question_one_b">Critical</string>
+    <string name="question_one_c">Analytical</string>
+    <string name="question_one_d">Value based</string>
+    <string name="question_one_correct">Heuristic</string>
+
+    <!-- string resources for question two msq-->
+    <string name="question_two">What was originally called the "imitation game" by its creator?</string>
+    <string name="question_two_a">The Turing Test</string>
+    <string name="question_two_b">LISP</string>
+    <string name="question_two_c">Cybernetics</string>
+    <string name="question_two_d">The Logic Theorist</string>
+    <string name="question_two_correct">The Turing Test</string>
+
+    <!-- string resources for question three -->
+    <string name="question_three">
+        In a rule-based system, procedural domain knowledge is in the form of:</string>
+    <string name="question_three_correct">Production Rules</string>
+
+    <!-- string resources for question four -->
+    <string name="question_four">One of the leading American robotics centers is the Robotics Institute located at:</string>
+    <string name="question_four_correct">CMU</string>
+
+    <!-- string resources for question two msq-->
+    <string name="question_five">What two criteria are used to help select a network medium from various network media?
+        \n(Choose two.)</string>
+    <string name="question_five_a">The types of data that need to be prioritized</string>
+    <string name="question_five_b">The cost of the end devices utilized in the network</string>
+    <string name="question_five_c">The distance the selected medium can successfully carry a signal</string>
+    <string name="question_five_d">The environment where the selected medium is to be installed</string>
+    <string name="question_five_correct_1">@string/question_five_c</string>
+    <string name="question_five_correct_2">@string/question_five_d</string>
+</resources>
+
