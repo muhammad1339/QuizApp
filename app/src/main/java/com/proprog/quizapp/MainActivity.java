@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean answerForQuestionFive() {
         boolean check = false;
-        int numOfChosen = 0;
+        int numOfChosen ;
 
         //prepare checkboxes
         CheckBox firstChoiceCheckBox = (CheckBox) findViewById(R.id.q5_a);
@@ -116,9 +116,9 @@ public class MainActivity extends AppCompatActivity {
         boolean isThirdAnswerChecked = thirdChoiceCheckBox.isChecked();
         boolean isFourthAnswerChecked = fourthChoiceCheckBox.isChecked();
 
-        numOfChosen = isQuestionFiveCorrect(isFirstAnswerChecked, firstAnswer);
-        numOfChosen = isQuestionFiveCorrect(isSecondAnswerChecked, secondAnswer);
-        numOfChosen = isQuestionFiveCorrect(isThirdAnswerChecked, thirdAnswer);
+        isQuestionFiveCorrect(isFirstAnswerChecked, firstAnswer);
+        isQuestionFiveCorrect(isSecondAnswerChecked, secondAnswer);
+        isQuestionFiveCorrect(isThirdAnswerChecked, thirdAnswer);
         numOfChosen = isQuestionFiveCorrect(isFourthAnswerChecked, fourthAnswer);
 
         if (numOfChosen == 2) {
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
         answerForQuestionThree();
         answerForQuestionFour();
         answerForQuestionFive();
-        Toast.makeText(this, "Correct " + countCorrectAnswers, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "You Got " + countCorrectAnswers + " OF 5", Toast.LENGTH_SHORT).show();
         countCorrectAnswers = 0;
         numOfCorrectChosen = 0;
         numOfActualChosen = 0;
