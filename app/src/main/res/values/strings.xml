@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Quiz App</string>
 
+    <string name="bt_submit_string">Submit</string>
     <!-- string resources for question one msq-->
     <string name="question_one">What is the term used for describing the judgmental
         or commonsense part of problem solving?</string>
