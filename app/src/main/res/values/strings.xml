@@ -9,7 +9,7 @@
     <string name="question_one_b">Critical</string>
     <string name="question_one_c">Analytical</string>
     <string name="question_one_d">Value based</string>
-    <string name="question_one_correct">Heuristic</string>
+    <string name="question_one_correct">@string/question_one_a</string>
 
     <!-- string resources for question two msq-->
     <string name="question_two">What was originally called the "imitation game" by its creator?</string>

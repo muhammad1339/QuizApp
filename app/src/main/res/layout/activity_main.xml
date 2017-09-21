@@ -28,6 +28,7 @@
                     android:text="@string/question_one" />
 
                 <RadioGroup
+                    android:id="@+id/question_one_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -70,6 +71,7 @@
                     android:text="@string/question_two" />
 
                 <RadioGroup
+                    android:id="@+id/question_two_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -184,6 +186,7 @@
             android:layout_width="150dp"
             android:layout_height="64dp"
             android:text="@string/bt_submit_string"
+            android:onClick="submitUserAnswers"
             android:layout_gravity="center"/>
     </LinearLayout>
 
