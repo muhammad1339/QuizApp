@@ -20,11 +20,11 @@
 
     <!-- string resources for question three -->
     <string name="question_three">
-        In a rule-based system, procedural domain knowledge is in the form of:</string>
+        In a rule-based system, procedural domain knowledge is in the form of:\n(Complete.)</string>
     <string name="question_three_correct">Production Rules</string>
 
     <!-- string resources for question four -->
-    <string name="question_four">One of the leading American robotics centers is the Robotics Institute located at:</string>
+    <string name="question_four">One of the leading American robotics centers is the Robotics Institute located at:\n(Complete.)</string>
     <string name="question_four_correct">CMU</string>
 
     <!-- string resources for question two msq-->

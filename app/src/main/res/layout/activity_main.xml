@@ -28,21 +28,26 @@
 
                 <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <RadioButton
+                        android:id="@+id/q1_a"
                         style="@style/choiceStyle"
                         android:text="@string/question_one_a" />
 
                     <RadioButton
+                        android:id="@+id/q1_b"
                         style="@style/choiceStyle"
                         android:text="@string/question_one_b" />
 
                     <RadioButton
+                        android:id="@+id/q1_c"
                         style="@style/choiceStyle"
                         android:text="@string/question_one_c" />
 
                     <RadioButton
+                        android:id="@+id/q1_d"
                         style="@style/choiceStyle"
                         android:text="@string/question_one_d" />
                 </RadioGroup>
@@ -65,21 +70,26 @@
 
                 <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <RadioButton
+                        android:id="@+id/q2_a"
                         style="@style/choiceStyle"
                         android:text="@string/question_two_a" />
 
                     <RadioButton
+                        android:id="@+id/q2_b"
                         style="@style/choiceStyle"
                         android:text="@string/question_two_b" />
 
                     <RadioButton
+                        android:id="@+id/q2_c"
                         style="@style/choiceStyle"
                         android:text="@string/question_two_c" />
 
                     <RadioButton
+                        android:id="@+id/q2_d"
                         style="@style/choiceStyle"
                         android:text="@string/question_two_d" />
                 </RadioGroup>
@@ -102,10 +112,11 @@
                     android:text="@string/question_three" />
 
                 <EditText
+                    android:id="@+id/q3_answer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:padding="12dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -124,10 +135,11 @@
                     android:text="@string/question_four" />
 
                 <EditText
+                    android:id="@+id/q4_answer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="12dp"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:padding="12dp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -146,19 +158,23 @@
 
 
                 <CheckBox
+                    android:id="@+id/q5_a"
                     style="@style/choiceStyle"
                     android:text="@string/question_five_a" />
 
                 <CheckBox
+                    android:id="@+id/q5_b"
                     style="@style/choiceStyle"
                     android:text="@string/question_five_b" />
 
                 <CheckBox
+                    android:id="@+id/q5_c"
                     style="@style/choiceStyle"
                     android:text="@string/question_five_c"
                     android:textColor="#757575" />
 
                 <CheckBox
+                    android:id="@+id/q5_d"
                     style="@style/choiceStyle"
                     android:text="@string/question_five_d" />
             </LinearLayout>
