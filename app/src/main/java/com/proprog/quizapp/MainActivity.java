@@ -27,9 +27,9 @@ import android.widget.Toast;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private int countCorrectAnswers = 0;
-    private int numOfCorrectChosen = 0;
-    private int numOfActualChosen = 0;
+    private int countCorrectAnswers;
+    private int numOfCorrectChosen;
+    private int numOfActualChosen;
 
 
     @Override
@@ -97,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean answerForQuestionFive() {
         boolean check = false;
-        int numOfChosen = 0;
 
         //prepare checkboxes
         CheckBox firstChoiceCheckBox = (CheckBox) findViewById(R.id.q5_a);
@@ -105,45 +104,12 @@ public class MainActivity extends AppCompatActivity {
         CheckBox thirdChoiceCheckBox = (CheckBox) findViewById(R.id.q5_c);
         CheckBox fourthChoiceCheckBox = (CheckBox) findViewById(R.id.q5_d);
 
-        //check checkboxes states
-        String firstAnswer = firstChoiceCheckBox.getText().toString();
-        String secondAnswer = secondChoiceCheckBox.getText().toString();
-        String thirdAnswer = thirdChoiceCheckBox.getText().toString();
-        String fourthAnswer = fourthChoiceCheckBox.getText().toString();
-
-        boolean isFirstAnswerChecked = firstChoiceCheckBox.isChecked();
-        boolean isSecondAnswerChecked = secondChoiceCheckBox.isChecked();
-        boolean isThirdAnswerChecked = thirdChoiceCheckBox.isChecked();
-        boolean isFourthAnswerChecked = fourthChoiceCheckBox.isChecked();
-
-        isQuestionFiveCorrect(isFirstAnswerChecked, firstAnswer);
-        isQuestionFiveCorrect(isSecondAnswerChecked, secondAnswer);
-        isQuestionFiveCorrect(isThirdAnswerChecked, thirdAnswer);
-        numOfChosen = isQuestionFiveCorrect(isFourthAnswerChecked, fourthAnswer);
-
-        if (numOfChosen == 2) {
+        if (!firstChoiceCheckBox.isChecked() && !secondChoiceCheckBox.isChecked() &&
+                thirdChoiceCheckBox.isChecked() && fourthChoiceCheckBox.isChecked()) {
             countCorrectAnswers++;
             check = true;
         }
-
         return check;
-    }
-
-    public int isQuestionFiveCorrect(boolean isChosen, String checkedAnswer) {
-        //get correct answers
-        String firstCorrectAnswer = getString(R.string.question_five_correct_1);
-        String secondCorrectAnswer = getString(R.string.question_five_correct_2);
-        if (isChosen) {
-            numOfActualChosen++;
-            if (firstCorrectAnswer.equals(checkedAnswer) || secondCorrectAnswer.equals(checkedAnswer)) {
-                numOfCorrectChosen++;
-            }
-        }
-        if (numOfActualChosen > 2) {
-            numOfCorrectChosen = 0;
-            return 0;
-        }
-        return numOfCorrectChosen;
     }
 
     public void submitUserAnswers(View view) {
@@ -153,11 +119,9 @@ public class MainActivity extends AppCompatActivity {
         answerForQuestionThree();
         answerForQuestionFour();
         answerForQuestionFive();
+
         Toast.makeText(this, "You Got " + countCorrectAnswers + " OF 5", Toast.LENGTH_SHORT).show();
         countCorrectAnswers = 0;
-        numOfCorrectChosen = 0;
-        numOfActualChosen = 0;
-
     }
 
 }
