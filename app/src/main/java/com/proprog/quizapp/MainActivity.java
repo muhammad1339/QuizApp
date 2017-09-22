@@ -28,8 +28,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private int countCorrectAnswers;
-    private int numOfCorrectChosen;
-    private int numOfActualChosen;
+
 
 
     @Override
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         EditText enteredAnswer = (EditText) findViewById(R.id.q3_answer);
         String checkedAnswer = enteredAnswer.getText().toString();
         String correctAnswer = getString(R.string.question_three_correct);
-        if (checkedAnswer.equalsIgnoreCase(correctAnswer)) {
+        if (checkedAnswer.trim().equalsIgnoreCase(correctAnswer.trim())) {
             check = true;
             countCorrectAnswers++;
         }
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         EditText enteredAnswer = (EditText) findViewById(R.id.q4_answer);
         String checkedAnswer = enteredAnswer.getText().toString();
         String correctAnswer = getString(R.string.question_four_correct);
-        if (checkedAnswer.equalsIgnoreCase(correctAnswer)) {
+        if (checkedAnswer.trim().equalsIgnoreCase(correctAnswer.trim())) {
             check = true;
             countCorrectAnswers++;
         }
@@ -120,7 +119,11 @@ public class MainActivity extends AppCompatActivity {
         answerForQuestionFour();
         answerForQuestionFive();
 
-        Toast.makeText(this, "You Got " + countCorrectAnswers + " OF 5", Toast.LENGTH_SHORT).show();
+        if (countCorrectAnswers > 0) {
+            Toast.makeText(this, "You Got " + countCorrectAnswers + " OF 5", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Try Again , check your answers", Toast.LENGTH_SHORT).show();
+        }
         countCorrectAnswers = 0;
     }
 
